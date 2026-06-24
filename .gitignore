@@ -1,0 +1,18 @@
+# Maven
+target/
+
+# Old build artifacts
+out/
+lib/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated files
+*.pdf
