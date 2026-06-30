@@ -106,7 +106,7 @@ public class Stok implements Notifikasi {
     @Override
     public void kirimNotifikasi(String pesan) {
         System.out.println("╔══════════════════════════════════════════════════════╗");
-        System.out.println("║  ⚠  ALERT SISTEM — STOK KRITIS TERDETEKSI!          ║");
+        System.out.println("║   ALERT SISTEM — STOK KRITIS TERDETEKSI!          ║");
         System.out.println("╠══════════════════════════════════════════════════════╣");
         System.out.println("║  " + pesan);
         System.out.println("╚══════════════════════════════════════════════════════╝");
