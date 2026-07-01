@@ -32,7 +32,7 @@ public class User extends Person {
         setPassword(password);
     }
 
-    // Getter untuk username (aman untuk ditampilkan di GUI)
+    // Getter untuk username (aman untuk ditampilkan di CLI)
     public String getUsername() {
         return username;
     }
@@ -70,14 +70,14 @@ public class User extends Person {
      */
     @Override
     public void tampilkanInfo() {
-        System.out.println("╔═══════════════════════════════════════╗");
-        System.out.println("║    INFO USER — SiPangan               ║");
-        System.out.println("╠═══════════════════════════════════════╣");
-        System.out.printf("║  Nama     : %-25s ║%n", getNama());
-        System.out.printf("║  Alamat   : %-25s ║%n", getAlamat());
-        System.out.printf("║  Email    : %-25s ║%n", getEmail());
-        System.out.printf("║  Username : %-25s ║%n", username);
-        System.out.println("║  Password : [RAHASIA - Tidak ditampilkan] ║");
-        System.out.println("╚═══════════════════════════════════════╝");
+        System.out.println("╔══════════════════════════════════════════════╗");
+        System.out.println("║         INFO USER - SiPangan                ║");
+        System.out.println("╠══════════════════════════════════════════════╣");
+        System.out.printf ("║  Nama     : %-32s ║%n", getNama());
+        System.out.printf ("║  Alamat   : %-32s ║%n", getAlamat());
+        System.out.printf ("║  Email    : %-32s ║%n", getEmail());
+        System.out.printf ("║  Username : %-32s ║%n", username);
+        System.out.println("║  Password : [RAHASIA - Tidak ditampilkan]    ║");
+        System.out.println("╚══════════════════════════════════════════════╝");
     }
 }

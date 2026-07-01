@@ -117,7 +117,7 @@ public class Stok implements Notifikasi {
      * Mengurangi kuantitas stok DAN secara OTOMATIS memicu kirimNotifikasi()
      * jika kuantitas menyentuh atau melewati batasMinimum.
      *
-     * Validasi (jumlah <= 0, jumlah > kuantitas) dilakukan di layer GUI sebelum
+     * Validasi (jumlah <= 0, jumlah > kuantitas) dilakukan di layer CLI sebelum
      * method ini dipanggil.
      *
      * @param jumlah jumlah unit yang dikurangi (diasumsikan sudah valid)
@@ -132,14 +132,14 @@ public class Stok implements Notifikasi {
                     "Stok '%s' di %s tersisa %d unit! (Batas Minimum: %d unit)",
                     produk.getNamaProduk(), gudangWilayah, this.kuantitas, this.batasMinimum);
             kirimNotifikasi(pesan); // Otomatis trigger! ← inilah Event Trigger-nya
-            return pesan; // Kembalikan pesan agar bisa ditampilkan di GUI
+            return pesan; // Kembalikan pesan agar bisa ditampilkan di CLI
         }
 
         return null; // null = stok masih aman, tidak ada alert
     }
 
     /**
-     * Helper: cek apakah stok sedang kritis (untuk pewarnaan baris di TableView).
+     * Helper: cek apakah stok sedang kritis (untuk penanda status di tampilan CLI).
      */
     public boolean isBawahMinimum() {
         return kuantitas <= batasMinimum;

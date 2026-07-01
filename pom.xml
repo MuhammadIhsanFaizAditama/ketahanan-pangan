@@ -16,17 +16,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <javafx.version>21.0.5</javafx.version>
     </properties>
 
     <dependencies>
-        <!-- JavaFX Controls -->
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>${javafx.version}</version>
-        </dependency>
-
         <!-- MySQL Connector -->
         <dependency>
             <groupId>com.mysql</groupId>
@@ -55,11 +47,11 @@
                 </configuration>
             </plugin>
 
-            <!-- JavaFX Maven Plugin (untuk menjalankan aplikasi) -->
+            <!-- Exec Maven Plugin (untuk menjalankan aplikasi CLI) -->
             <plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.8</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.1</version>
                 <configuration>
                     <mainClass>sipangan.SiPanganApp</mainClass>
                 </configuration>

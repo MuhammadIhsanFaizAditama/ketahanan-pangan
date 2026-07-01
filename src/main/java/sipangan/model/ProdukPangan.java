@@ -60,9 +60,9 @@ public class ProdukPangan {
     }
 
     /**
-     * toString() di-override agar JavaFX ComboBox menampilkan teks yang bermakna.
-     * Tanpa ini, ComboBox hanya menampilkan: "ProdukPangan@7a3f4f72" (tidak
-     * berguna).
+     * toString() di-override agar objek menampilkan teks yang bermakna
+     * saat dicetak ke konsol (CLI). Tanpa ini, System.out.println() hanya
+     * menampilkan: "ProdukPangan@7a3f4f72" (tidak berguna).
      */
     @Override
     public String toString() {

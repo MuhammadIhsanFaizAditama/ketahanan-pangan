@@ -12,7 +12,7 @@ import java.util.List;
 // FILE    : SiPanganDAO.java
 // PACKAGE : sipangan.db
 // KONSEP  : DATA ACCESS OBJECT (DAO) — pola desain yang memisahkan logika
-//           akses database (SQL) dari logika bisnis dan antarmuka GUI.
+//           akses database (SQL) dari logika bisnis dan antarmuka CLI.
 //
 // Semua operasi CRUD (Create-Read-Update-Delete) ke MySQL ada di sini.
 // Menggunakan PreparedStatement, bukan String concatenation, untuk mencegah
@@ -126,7 +126,7 @@ public class SiPanganDAO {
     /** DELETE — Hapus produk berdasarkan ID */
     public static boolean hapusProduk(int idProduk) {
         // Catatan: jika produk masih direferensi oleh tabel stok (FK),
-        // MySQL akan menolak penghapusan → tangani pesannya di GUI.
+        // MySQL akan menolak penghapusan → tangani pesannya di CLI.
         String sql = "DELETE FROM produk_pangan WHERE id_produk = ?";
         try (Connection conn = DatabaseConnection.getConnection();
                 PreparedStatement ps = conn.prepareStatement(sql)) {

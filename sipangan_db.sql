@@ -21,7 +21,7 @@ USE sipangan_db;
 -- Menyimpan data pengguna aplikasi (admin, operator gudang, dll.)
 -- Sesuai dengan class User (turunan dari abstract class Person) di Java.
 -- ─────────────────────────────────────────────────────────────────────
-DROP TABLE IF EXISTS stok;          -- Hapus tabel turunan terlebih dahulu (foreign key)
+DROP TABLE IF EXISTS stok;
 DROP TABLE IF EXISTS produk_pangan;
 DROP TABLE IF EXISTS users;
 
