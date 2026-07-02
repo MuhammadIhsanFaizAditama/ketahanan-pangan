@@ -1,22 +1,15 @@
 package sipangan.model;
 
-// =========================================================================
-// FILE    : ProdukPangan.java
-// PACKAGE : sipangan.model
-// KONSEP  : CLASS biasa dengan enkapsulasi standar (getter & setter).
-//           Merepresentasikan satu entitas produk pangan dalam sistem.
-// =========================================================================
+// Class Produk Pangan
 public class ProdukPangan {
 
-    // Atribut private — enkapsulasi standar
+    // Atribut
     private int idProduk;
     private String namaProduk;
     private String kategori;
-    private String tanggalKedaluwarsa; // Format: YYYY-MM-DD (disimpan sebagai String)
+    private String tanggalKedaluwarsa;
 
-    /**
-     * Constructor: wajib mengisi semua atribut saat membuat objek baru.
-     */
+    // Konstruktor
     public ProdukPangan(int idProduk, String namaProduk,
             String kategori, String tanggalKedaluwarsa) {
         this.idProduk = idProduk;
@@ -25,7 +18,7 @@ public class ProdukPangan {
         this.tanggalKedaluwarsa = tanggalKedaluwarsa;
     }
 
-    // ── Getter (Baca) ──
+    // Getter
     public int getIdProduk() {
         return idProduk;
     }
@@ -42,7 +35,7 @@ public class ProdukPangan {
         return tanggalKedaluwarsa;
     }
 
-    // ── Setter (Tulis) ──
+    // Setter
     public void setIdProduk(int id) {
         this.idProduk = id;
     }
@@ -59,11 +52,7 @@ public class ProdukPangan {
         this.tanggalKedaluwarsa = tgl;
     }
 
-    /**
-     * toString() di-override agar objek menampilkan teks yang bermakna
-     * saat dicetak ke konsol (CLI). Tanpa ini, System.out.println() hanya
-     * menampilkan: "ProdukPangan@7a3f4f72" (tidak berguna).
-     */
+    // Override toString
     @Override
     public String toString() {
         return namaProduk + "  [" + kategori + "]";
